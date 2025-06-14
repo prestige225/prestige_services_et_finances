@@ -1,0 +1,123 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prestige service</title>
+</head>
+<style>
+
+    /* importation de la police */
+  @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
+
+  /*initialisation de la marge, spacement et la police par defaut  */
+  *{
+    box-sizing: border-box;  /* dedinie comment un element est calculer*/
+    padding: 0;
+    margin: 0;
+    font-family: 'Poppins', sans-serif ;
+  }
+  body{
+    background-color: #f5f5f5;
+    padding-top: 100px; /* decalage pour eviter que le menu de navigation puis se cacher sous le header*/
+    transition: backgroud-color 0.3s ease; /* transition de la couleur de fond */
+
+  }
+  header{
+     background: linear-gradient(90deg, #0066FF,#000066); /* degradation de couleur de fond*/
+    color: white;
+    /* activation et manipulation du flex boss */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 30px; /* reduire l'espacement autour du logo*/
+    position: fixed; /* fixer le header en haut de la page*/
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000; /* s'assurer que le header set toujour en haut de la page*/
+}
+.logo{
+    display: flex;
+    align-items: center; /* aligner les enfant d'un element au centre du flex verticalement*/
+    gap: 10PX; /* spacement entre le logo et le texte*/
+}
+
+.logo img {
+     width: 100px;
+    height: 100px;
+    object-fit: cover; /* s'assurer que le logo garde son aspect sans deformation*/
+    border-radius:50% ;
+}
+.logo h1 {
+   
+    color: #fff; /* couleur du texte du logo */
+     font-size: 1.8rem; /* LA TAILE DU texte du FONT De LOGO*/
+    text-transform: uppercase; /* le texte en majuscule*/
+    margin: 0;
+}
+.logo h1:hover {
+    color: rgb(22, 190, 22); /* couleur du texte au survol */
+    text-decoration: underline; /* souligner le texte au survol */
+}
+
+nav {
+    padding: 10px 20px;
+}
+.nav-list{
+    display: flex;
+    justify-content: center;
+    gap: 30PX;
+    margin: 0;
+    padding: 0;
+}
+.nav-list li{
+    opacity: 0;
+   transform: translateY(-20PX);
+   animation: fadeIn 1s ease-out forwards;
+   list-style: none;
+}
+
+@keyframes fadeIn{
+    to{
+      opacity: 1;
+      transform: translateY(0);
+   }
+}
+.nav-list li a {
+    text-decoration: none;
+   color: white;
+   font-size: 18px;
+   font-weight: bold;
+   animation: 0.3s ease;
+   display: inline-flex;
+    align-items: center;
+}
+
+.nav-list li a:hover {
+    color: rgb(22, 190, 22); /* couleur du texte au survol */
+    text-decoration: underline; /* souligner le texte au survol */
+}
+
+</style>
+<body>
+   <header class="site-header">
+    <div class="logo">
+        <img src="image/prestige.jpg" alt="Prestige Service Logo" />
+        <h1>Prestige Service Et Finance</h1>
+    </div>
+
+    <!-- menu de navigation -->
+
+    <nav class="nav-list">
+        <ul>
+            <li><a href="index.html">Accueil</a></li>
+            <li><a href="prestige.html">À propos</a></li>
+            <li><a href="finance.html">Demande de service / devis</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+    </nav>
+   </header> 
+</body>
+</html>
